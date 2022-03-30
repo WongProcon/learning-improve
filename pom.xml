@@ -29,6 +29,41 @@
             </roles>
         </developer>
     </developers>
+    <repositories>
+        <repository>
+            <id>rdc-snapshots</id>
+            <name>阿里云能效仓库快照版</name>
+            <url>https://repo.rdc.aliyun.com/repository/139130-snapshot-h5K85y/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>rdc-releases</id>
+            <name>阿里云能效仓库稳定版</name>
+            <url>https://repo.rdc.aliyun.com/repository/139130-release-VqBNZh/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
-
+    <distributionManagement>
+        <repository>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/139130-release-VqBNZh/</url>
+        </repository>
+        <snapshotRepository>
+            <id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/139130-snapshot-h5K85y/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
